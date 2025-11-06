@@ -8,25 +8,36 @@ body {
 }
 
 .container {
-    background-color: #4E3822;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
+  background-color: #4E3822;
+  height: 70px;
+  display: flex;
+  justify-content: space-between; 
+  padding-top: 10px;
+}
 
+.logo img {
+  height: 45px;
+  padding-top: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  padding-top: 20px;
+  padding-right: 10px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .container a:hover {
-    color: rgb(0, 0, 0);
-
+  color: #000; 
 }
 
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
 
 .footer {
     position: fixed;
