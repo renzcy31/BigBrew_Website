@@ -226,40 +226,56 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
     }
 
-    .praf {
-        font-family: "Lumanosimo", cursive;
-        font-weight: 1000;
-        font-style: normal;
-        font-size: 40px;
-    }
-
-    .mt {
-        font-family: "Pacifico", cursive;
-        font-weight: 1000;
-        font-style: normal;
-        font-size: 30px;
-    }
-
-    .coffee {
-        font-family: "Archivo Black", sans-serif;
-        font-weight: 1000;
-        font-style: normal;
-        font-size: 40px;
-    }
-
-    .fruity {
-        font-family: "Macondo Swash Caps", cursive;
-        font-weight: 1000;
-        font-style: normal;
-        font-size: 30px;
+    .row {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        gap: 20px;
 
     }
 
-    .brosty {
-        font-family: "Boldonse", system-ui;
-        font-weight: 1000;
-        font-style: normal;
-        font-size: 40px;
+    .milktea {
+        flex-basis: 21%;
+        background-color: #4e3822;
+        border-radius: 50px;
+        margin-bottom: 50px;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        transition: transform .25s ease, box-shadow .25s ease;
+        transform-origin: center;
+        will-change: transform;
+        text-align: center;
+
+    }
+
+    .milktea img {
+        width: 80%;
+        height: 500px;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto 5px;
+        max-height: 220px;
+        object-fit: cover;
+    }
+
+    .milktea h3 {
+        color: #fff;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .milktea:hover,
+    .milktea:focus-within {
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0px;
+        color: #be6f1a;
     }
 </style>
 
@@ -280,40 +296,9 @@
         </nav>
     </div>
     <div class="content">
-        <h1>Product</h1>
+        <h1>PRAF</h1>
     </div>
 
-    <div class="row">
-        <div class="products">
-            <div class="mt">
-                <a href="milktea.html">Milk Tea</a>
-            </div>
-        </div>
-
-        <div class="products">
-            <div class="praf">
-                <a href="praf.html">Praf</a>
-            </div>
-        </div>
-
-        <div class="products">
-            <div class="coffee">
-                <a href="coffee.html">Coffee</a>
-            </div>
-        </div>
-
-        <div class="products">
-            <div class="fruity">
-                <a href="fruity.html">Fruit Tea</a>
-            </div>
-        </div>
-
-        <div class="products">
-            <div class="brosty">
-                <a href="brosty.html">Brosty</a>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="milktea">
             <img src="pics/DARK CHOCO.png">
