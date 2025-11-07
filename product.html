@@ -153,33 +153,42 @@
     }
 
     .row {
-        margin-top: 5%;
         display: flex;
-        justify-content: space-between;
-        gap: 2px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        gap: 20px;
+
     }
 
     .milktea {
-        flex-basis: 31%;
+        flex-basis: 21%;
         background-color: #4e3822;
-        border-radius: 20px;
+        border-radius: 50px;
         margin-bottom: 50px;
-        padding: 20px 12px;
+        padding: 15px 10px;
         box-sizing: border-box;
-        transition: 0.5;
-    }
-
-    .milktea img {
-        width: 100%;
-        height: auto;
-        border-radius: 20px;
-        display: block;
-    }
-
-    .milktea {
         transition: transform .25s ease, box-shadow .25s ease;
         transform-origin: center;
         will-change: transform;
+        text-align: center;
+
+    }
+
+    .milktea img {
+        width: 80%;
+        height: 500px;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto 5px;
+        max-height: 220px;
+        object-fit: cover;
+    }
+
+    .milktea h3 {
+        color: #fff;
+        font-size: 18px;
+        margin: 0;
     }
 
     .milktea:hover,
@@ -314,55 +323,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
 
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
-
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
-
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
-
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
-
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
-
-        <div class="milktea">
-            <img src="pics/DARK CHOCO.png">
-            <h3>Cookies & Cream</h3>
-        </div>
-    </div>
     <div class="footer">
         <div class="logo2">
             <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
