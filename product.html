@@ -156,13 +156,14 @@
         margin-top: 5%;
         display: flex;
         justify-content: space-between;
+        gap: 2px;
     }
 
     .milktea {
         flex-basis: 31%;
         background-color: #4e3822;
-        border-radius: 10px;
-        margin-bottom: 5px;
+        border-radius: 20px;
+        margin-bottom: 50px;
         padding: 20px 12px;
         box-sizing: border-box;
         transition: 0.5;
@@ -171,7 +172,7 @@
     .milktea img {
         width: 100%;
         height: auto;
-        border-radius: 10px;
+        border-radius: 20px;
         display: block;
     }
 
@@ -193,6 +194,44 @@
         margin: 10px 0px;
         color: #be6f1a;
     }
+
+    .products {
+        flex-basis: 31%;
+        background-color: #4e3822;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5;
+        margin: 50px;
+    }
+
+    .products a[href] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #be6f1a;
+    }
+
+    .products {
+        transition: transform .25s ease, box-shadow .25s ease;
+        transform-origin: center;
+        will-change: transform;
+    }
+
+    .products:hover,
+    .products:focus-within {
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+    }
+
+    .praf {
+        font-family: "Alfa Slab One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+    }
 </style>
 
 <body>
@@ -212,7 +251,39 @@
         </nav>
     </div>
     <div class="content">
-        <h1>PRODUCTS</h1>
+        <h1>Product</h1>
+    </div>
+
+    <div class="row">
+        <div class="products">
+            <div class="mt">
+                <a href="#">Milk Tea</a>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="praf">
+                <a href="#">Praf</a>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="coffee">
+                <a href="#">Coffee</a>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="fruity">
+                <a href="#">Fuity</a>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="brosty">
+                <a href="#">Brosty</a>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="milktea">
