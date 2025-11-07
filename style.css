@@ -60,28 +60,14 @@
             inset: calc(100% - 3px) 0 0 0;
             background-color: #fff7d2;
             scale: 0 1;
-            transition: 0.3s, translate 0s 0.3s;
-        }
-
-        ul:hover li:before {
-            scale: 1;
+            transition: scale 0.3s ease;
         }
 
         ul li:hover:before {
-            translate: 0;
-            transition: 0.3s;
+            scale: 1;
         }
 
-        ul:hover li:has(~ li:hover):before {
-            translate: 100% 0;
-            transition: 0.2s 0.2s, scale 0s 0.4s;
-        }
-
-        ul:hover li:hover ~ li:before {
-            translate: -100% 0;
-            transition: 0.2s 0.2s, scale 0s 0.4s;
-        }
-
+       
         .content {
             min-height: calc(100vh - 200px);
             padding: 20px;
