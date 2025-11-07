@@ -175,8 +175,16 @@
         display: block;
     }
 
-    .milktea:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    .milktea {
+        transition: transform .25s ease, box-shadow .25s ease;
+        transform-origin: center;
+        will-change: transform;
+    }
+
+    .milktea:hover,
+    .milktea:focus-within {
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
     }
 
     h3 {
