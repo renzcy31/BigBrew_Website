@@ -73,28 +73,33 @@ ul li:hover:before {
 
 .content {
   min-height: calc(100vh - 200px);
-  padding: 20px;
+  padding: 20px 80px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background-color: #f8e7b8;
 }
 
-.content h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  color: #be6f1a;
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text h1 {
   font-size: 45px;
-  padding-bottom: 100px;
-  margin-left: 100px;
+  font-weight: 700;
+  color: #a05a19;
+  margin-bottom: 15px;
 }
 
-.content-1 h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  color: #be6f1a;
-  font-size: 20px;
-  padding-bottom: 100px;
-  margin-left: 120px;
+.text p {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.849);
+  margin: 0;
 }
+
+
 
 .footer {
   bottom: 0;
