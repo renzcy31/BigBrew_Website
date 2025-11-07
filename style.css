@@ -22,10 +22,13 @@
             height: 45px;
         }
 
+        nav{
+            margin-right: 10%;
+        }
         ul {
             display: flex;
             list-style-type: none;
-            gap: 25px;
+            gap: 10px;
             margin: 0;
             padding: 0;
         }
@@ -55,7 +58,7 @@
             content: " ";
             position: absolute;
             inset: calc(100% - 3px) 0 0 0;
-            background-color: #8B7355;
+            background-color: #fff7d2;
             scale: 0 1;
             transition: 0.3s, translate 0s 0.3s;
         }
