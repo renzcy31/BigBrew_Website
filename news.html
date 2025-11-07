@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -13,8 +12,141 @@
     <title>BIG BREW</title>
 </head>
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    body {
+        background: linear-gradient(135deg, #f7eec7 0%, #ebd9b4 50%, #dcc29e 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .container {
+        background-color: #4e3822;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    nav {
+        margin-right: 10%;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        padding: 0 0.5em 0.25em;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-size: 14px;
+        transition: color 0.3s;
+    }
+
+    ul li:hover a {
+        color: #fff7d2;
+    }
+
+    ul li:before {
+        content: " ";
+        position: absolute;
+        inset: calc(100% - 3px) 0 0 0;
+        background-color: #fff7d2;
+        scale: 0 1;
+        transition: scale 0.3s ease;
+    }
+
+    ul li:hover:before {
+        scale: 1;
+    }
+
+    .content {
+        min-height: calc(100vh - 200px);
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 20px;
+        text-align: center;
+        background-color: #4e3822;
+        font-size: 14px;
+    }
+
+    .footer .logo2 img {
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .footer a {
+        text-decoration: none;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        transition: color 0.3s;
+        margin: 0 5px;
+    }
+
+    .footer a:hover {
+        color: #cccccc;
+    }
+
+    .footer p {
+        padding: 20px 0 0 0;
+        color: rgba(255, 255, 255, 0.24);
+        margin: 0;
+    }
+
+    .socials {
+        margin-top: 10px;
+    }
+
+    .socials i {
+        color: white;
+        margin: 0 10px;
+        font-size: 30px;
+        transition: color 1.5s ease;
+        cursor: pointer;
+    }
+
+    .socials i:hover {
+        transform: scale(1.1);
+    }
 </style>
+
 <body>
     <div class="container">
         <div class="logo">
@@ -24,8 +156,8 @@
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="product.html">PRODUCTS</a></li>
-                <li><a href="news.html">BE A FRANCHISEE</a></li>
-                <li><a href="#">NEWS & ARTICLE</a></li>
+                <li><a href="#">FIND A BRANCH</a></li>
+                <li><a href="news.html">NEWS & ARTICLE</a></li>
                 <li><a href="#">CAREERS</a></li>
                 <li><a href="#">CONTACT US</a></li>
             </ul>
@@ -39,10 +171,10 @@
             <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
         </div>
         <div>
-            <a href="#">HOME</a> |
-            <a href="#">PRODUCTS</a> |
-            <a href="#">BE A FRANCHISEE</a> |
-            <a href="#">NEWS & ARTICLE</a> |
+            <a href="index.html">HOME</a> |
+            <a href="product.html">PRODUCTS</a> |
+            <a href="#">FIND A BRANCH</a> |
+            <a href="news.html">NEWS & ARTICLE</a> |
             <a href="#">CAREERS</a> |
             <a href="#">CONTACT US</a>
         </div>
