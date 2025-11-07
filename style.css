@@ -76,7 +76,6 @@ ul li:hover:before {
   padding: 20px;
   display: flex;
   align-items: center;
-  margin-left: 600px;
 }
 
 .content h1 {
@@ -88,7 +87,6 @@ ul li:hover:before {
 }
 
 .footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
