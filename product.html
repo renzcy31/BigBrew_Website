@@ -92,6 +92,7 @@
         justify-content: center;
         display: flex;
         align-items: center;
+        margin-bottom: 25px;
     }
 
     .content h1 {
@@ -163,19 +164,17 @@
 
     .milktea {
         flex-basis: 21%;
-        background-color: #4e3822;
         border-radius: 50px;
         margin-bottom: 50px;
         padding: 15px 10px;
         box-sizing: border-box;
-        transition: transform .25s ease, box-shadow .25s ease;
-        transform-origin: center;
-        will-change: transform;
         text-align: center;
+        background-color: #be6f1a;
 
     }
 
     .milktea img {
+        transform-origin: center;
         width: 80%;
         height: 500px;
         border-radius: 15px;
@@ -183,6 +182,9 @@
         margin: 0 auto 5px;
         max-height: 220px;
         object-fit: cover;
+        transition: transform .25s ease, box-shadow .25s ease;
+        transform-origin: center;
+        will-change: transform;
     }
 
     .milktea h3 {
@@ -191,10 +193,10 @@
         margin: 0;
     }
 
-    .milktea:hover,
-    .milktea:focus-within {
-        transform: scale(1.03);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+    .milktea img:hover,
+    .milktea img:focus-within {
+        transform: scale(1.15);
+
     }
 
     h3 {
@@ -205,14 +207,14 @@
     }
 
     .products {
-        flex-basis: 31%;
+        flex-basis: 18%;
         background-color: #4e3822;
         border-radius: 10px;
         margin-bottom: 5px;
         padding: 20px 12px;
         box-sizing: border-box;
         transition: 0.5;
-        margin: 50px;
+        margin: 2px;
     }
 
     .products a[href] {
@@ -273,6 +275,7 @@
 </style>
 
 <body>
+
     <div class="container">
         <div class="logo">
             <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
@@ -292,6 +295,8 @@
     <div class="content">
         <h1>Product</h1>
     </div>
+
+
 
     <div class="row">
         <div class="products">
@@ -322,6 +327,56 @@
             <div class="brosty">
                 <a href="brosty.html">Brosty</a>
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
+        </div>
+
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
+        </div>
+
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
+        </div>
+
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
+        </div>
+
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
+        </div>
+
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
+        </div>
+
+        <div class="milktea">
+            <img src="pics/darkchocolate.png">
+            <h3>Cookies & Cream</h3>
         </div>
     </div>
 
