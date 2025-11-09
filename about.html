@@ -42,6 +42,7 @@
         display: flex;
         align-items: center;
         gap: 60px;
+        flex-direction: row-reverse;
     }
 
     .about-content {
@@ -72,6 +73,45 @@
         height: auto;
         display: block;
     }
+
+    /**/
+
+    .abouts2 {
+        background: linear-gradient(135deg, #f7eec7 0%, #ebd9b4 50%, #dcc29e 100%);
+        padding: 80px;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .about-content2 {
+        flex: 1;
+    }
+
+    .abouts2 h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #4e3822;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .abouts2 p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #4e3822;
+        margin-bottom: 20px;
+    }
+
+    .about-img3 {
+        flex: 0 0 40%;
+        max-width: 500px;
+    }
+
+    .about-img3 img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 </style>
 
 <body>
@@ -97,11 +137,11 @@
         <div class="content">
         </div>
 
-        <section class="about">
-            <div class="about-img">
+        <section class="abouts2">
+            <div class="about-img2">
                 <img src="pics/about2.png" alt="">
             </div>
-            <div class="about-content">
+            <div class="about-content2">
                 <h1>Behind Big Brew</h1>
                 <p>We believe great drinks bring people together.
                     From bold coffee blends to refreshing fruit teas, every cup is crafted to energize, inspire, and
@@ -111,7 +151,21 @@
                     flavor, fun, and friendship. Whether you’re studying, hanging out, or chasing big dreams, BigBrew is
                     here to keep you going — one sip at a time.</p>
             </div>
+        </section>
 
+        <section class="about">
+            <div class="about-img3">
+                <img src="pics/openning.jpg" alt="">
+            </div>
+            <div class="about-content">
+                <h1>Proudly Filipino</h1>
+                <p>Born from local roots and brewed with Filipino pride, Big Brew celebrates the unique flavors and
+                    creativity of the Philippines. We’re proud to share our culture with every customer, wherever they
+                    may be — one drink, one smile, one story at a time. <br><br>As we continue to grow, we stay true to
+                    our mission: to uplift local communities, empower Filipino talent, and showcase the artistry of
+                    homegrown flavors to the world. Big Brew isn’t just a brand — it’s a celebration of who we are and
+                    what we can create together.</p>
+            </div>
         </section>
 
         <div class="footer">
