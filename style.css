@@ -77,24 +77,31 @@ ul li:hover:before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f8e7b8;
+  background-image: url("/pics/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+ 
 }
 
 .text h1 {
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 4.5rem;
+  font-weight: 800;
   color: #a05a19;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  font-family: 'Montserrat';
 }
 
 .text p {
-  font-size: 15px;
+  font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.849);
   margin: 0;
 }
