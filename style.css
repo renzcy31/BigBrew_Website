@@ -93,15 +93,15 @@ ul li:hover:before {
   font-size: 4.5rem;
   font-weight: 800;
   color: #a05a19;
-  margin-bottom: 40px;
   line-height: 1.2;
   font-family: "Montserrat";
 }
 
 .text p {
   font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.849);
+  color: black;
   margin: 0;
+  font-weight: 700;
 }
 
 .buttons {
