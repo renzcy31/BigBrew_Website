@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #f7eec7 0%, #ebd9b4 50%, #dcc29e 100%);
+   background: linear-gradient(135deg, #f7eec7 0%, #ebd9b4 50%, #dcc29e 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
