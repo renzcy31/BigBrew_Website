@@ -72,7 +72,7 @@ ul li:hover:before {
 }
 
 .content {
-  min-height: calc(100vh - 200px);
+  min-height: calc(130vh - 200px);
   padding: 20px 80px;
   display: flex;
   align-items: center;
@@ -81,14 +81,12 @@ ul li:hover:before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
 }
 
 .text h1 {
@@ -97,7 +95,7 @@ ul li:hover:before {
   color: #a05a19;
   margin-bottom: 40px;
   line-height: 1.2;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .text p {
@@ -136,10 +134,31 @@ ul li:hover:before {
 }
 
 .buttons a:last-child:hover {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   color: #7a3e11;
 }
 
+.customer {
+  background-color: #fffbf0;
+  padding: 80px;
+  color: white;
+  min-height: calc(130vh - 200px);
+}
+.customer h2 {
+  font-weight: 800;
+  color: #a05a19;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+  text-align: center;
+}
+.customer p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #a05a19;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
 .footer {
   bottom: 0;
   left: 0;
@@ -149,7 +168,6 @@ ul li:hover:before {
   background-color: #4e3822;
   font-size: 14px;
 }
-
 .footer .logo2 img {
   height: 40px;
   margin-bottom: 15px;
