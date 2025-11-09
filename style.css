@@ -106,7 +106,39 @@ ul li:hover:before {
   margin: 0;
 }
 
+.buttons {
+  display: flex;
+  gap: 20px;
+}
 
+.buttons a {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  background-color: #7a3e11;
+}
+
+.buttons a:first-child {
+  background-color: #a05a19;
+  color: #7a3e11;
+}
+
+.buttons a:first-child:hover {
+  background-color: #7a3e11;
+  color: #7a3e11;
+}
+.buttons a:last-child {
+  background-color: a05a19;
+  color: white;
+  border: 2px solid #a05a19;
+}
+
+.buttons a:last-child:hover {
+  background-color: #EEEEEE;
+  color: #7a3e11;
+}
 
 .footer {
   bottom: 0;
