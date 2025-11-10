@@ -221,7 +221,8 @@ ul li:hover:before {
   margin-top: 30px;
   padding: 20px;
 }
-.customer h2{
+
+.customer h2 {
   margin-top: 20px;
   font-weight: 800;
   border-top: 2px solid #a05a19;
@@ -231,14 +232,16 @@ ul li:hover:before {
   color: #4e3822;
   font-family: 'Montserrat', sans-serif;
 }
-.piccard{
+
+.piccard {
   display: flex;
   gap: 20px;
   max-width: 1400px;
-  width:100%;
+  width: 100%;
   justify-content: center;
 }
-.cards{
+
+.cards {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -248,23 +251,27 @@ ul li:hover:before {
   transition: width 0.5s ease, transform 0.5s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   flex-shrink: 1;
-  filter: grayscale(100%);
+
 }
+
 .piccard:has(.cards:hover) .cards:not(:hover) {
   width: 100px;
 }
-.cards:hover{
+
+.cards:hover {
   width: 500px;
   transform: scale(1.02);
   z-index: 10;
   filter: grayscale(0%);
 }
-.cards img{
-  width:100%;
+
+.cards img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
+
 .cards:hover img {
   transform: scale(1.08);
 }
