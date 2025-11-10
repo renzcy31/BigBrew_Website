@@ -92,7 +92,7 @@ ul li:hover:before {
 .text h1 {
   font-size: 4.5rem;
   font-weight: 800;
-  color: #a05a19;
+  color: #4e3822;
   line-height: 1.2;
   font-family: "Montserrat";
 }
@@ -213,7 +213,7 @@ ul li:hover:before {
   transform: scale(1.1);
 }
 
-.customers {
+.customer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -221,23 +221,50 @@ ul li:hover:before {
   margin-top: 30px;
   padding: 20px;
 }
-
-.customers img {
-  width: 200px;
+.customer h2{
+  margin-top: 20px;
+  font-weight: 700;
+  border-top: 2px solid #a05a19;
+  border-bottom: 2px solid #a05a19;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #4e3822;
+}
+.piccard{
+  display: flex;
+  gap: 20px;
+  max-width: 1400px;
+  width:100%;
+  justify-content: center;
+}
+.cards{
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
   height: 500px;
-  border-radius: 12px;
+  width: 180px;
+  transition: width 0.5s ease, transform 0.5s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  flex-shrink: 1;
+}
+.piccard:has(.cards:hover) .cards:not(:hover) {
+  width: 100px;
+}
+.cards:hover{
+  width: 500px;
+  transform: scale(1.02);
+  z-index: 10;
+}
+.cards img{
+  width:100%;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
 }
-
-
-.customers img:hover {
-  transform: scale(1.07);
-  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.445);
-
+.cards:hover img {
+  transform: scale(1.08);
 }
-
 
 @media (max-width: 768px) {
   .customers img {
