@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/pics/favicon.png">    
+    <link rel="icon" type="image/x-icon" href="/pics/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>BIG BREW</title>
 </head>
@@ -27,6 +27,7 @@
         font-family: "Poppins", sans-serif;
     }
 
+
     .container {
         background-color: #4e3822;
         height: 70px;
@@ -34,6 +35,115 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
+    }
+
+    .contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120vh;
+        border: 1px solid #ccc;
+    }
+
+    .career-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .career-page h1 {
+
+        font-size: 3.2rem;
+        color: #4e3822;
+        margin-top: 20px;
+    }
+
+    .career-page img {
+        height: 400px;
+        border-radius: 50px;
+        object-fit: cover;
+    }
+
+    .career-page h2 {
+        font-weight: normal;
+        max-width: 700px;
+        text-align: center;
+        color: #333;
+        line-height: 1.5;
+    }
+
+    .apply-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2em;
+        flex-wrap: wrap;
+        margin-top: 3em;
+    }
+
+    .apply {
+        width: 22em;
+        height: 22em;
+        background-color: #6b4a2b;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .apply:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .apply-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    .apply h3 {
+        font-size: 1em;
+        color: #ffffff;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 1em;
+    }
+
+    .apply .location {
+        font-size: 0.9em;
+        color: #ffffff;
+        margin: 0.5em 0;
+    }
+
+    .apply .type {
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    /* Button */
+    .apply-btn {
+        background-color: #4e3822;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 0.8em 2em;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 1em;
+        transition: background-color 0.3s ease;
+    }
+
+    .apply-btn:hover {
+        background-color: #c97c33;
     }
 
     .logo img {
@@ -169,13 +279,71 @@
         transform: scale(1.1);
     }
 
-    .career-page img {
-        width: 60%;
+    .head {
+        border-top: 2px solid #cbb292;
+        border-bottom: 2px solid #cbb292;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .head h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #4e3822;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #f7eec7 0%, #ebd9b4 50%, #dcc29e 100%);
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .join-section {
+        background-color: #f5efdf;
+        text-align: center;
+        padding: 4em 2em;
+        color: #2a1d0e;
+    }
+
+    .join-section h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2em;
+        color: #1a1a1a;
+    }
+
+    .steps-container {
         display: flex;
-        justify-content: center; 
-        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3em;
+        flex-wrap: wrap;
 
+    }
 
+    .step {
+        width: 300px;
+        background: none;
+        text-align: center;
+    }
+
+    .step img {
+        width: 120px;
+        height: 80px;
+        margin-bottom: 1em;
+    }
+
+    .step h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+
+    .step p {
+        font-size: 0.95rem;
+        color: #333;
+        line-height: 1.5;
     }
 </style>
 
@@ -202,15 +370,81 @@
             with us.</p>
     </div>
 
+
+    <section class="header">
+        <div class="head">
+            <h1>Build a Career You’re Proud Of!</h1>
+        </div>
+    </section>
+
     <section class="content">
         <div class="contents">
             <div class="career-page">
                 <img src="pics/expo.jpg" alt="barista">
+                <h2>
+                    At BigBrew, we're not just brewing drinks — we're brewing dreams.
+                    Join a team where your energy, creativity, and dedication are truly valued.
+                    Whether you're starting your journey or looking to grow, we’re here to support every step.
+                </h2>
 
+                <h1>
+                    APPLY NOW!
+                </h1>
+            </div>
+        </div>
+
+        <div class="apply-container">
+            <div class="apply">
+                <img src="pics/logo.png" alt="Big Brew Logo">
+                <h3>FRANCHISEE MARKETING SUPPORT REPRESENTATIVE</h3>
+                <p class="location">📍 BIGBREW MAIN OFFICE, MALABON</p>
+                <p class="type">PERMANENT</p>
+                <button class="apply-btn">Apply Now</button>
             </div>
 
+            <div class="apply">
+                <img src="pics/logo.png" alt="Big Brew Logo">
+                <h3>BARISTA</h3>
+                <p class="location">📍 BIGBREW CAFÉ, QUEZON CITY</p>
+                <p class="type">FULL-TIME</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="apply">
+                <img src="pics/logo.png" alt="Big Brew Logo">
+                <h3>STORE SUPERVISOR</h3>
+                <p class="location">📍 BIGBREW CAFÉ, MANILA</p>
+                <p class="type">FULL-TIME</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="join-section">
+        <h2>How to Join the BigBrew Team</h2>
+
+        <div class="steps-container">
+            <div class="step">
+                <img src="pics/forms.png" alt="Submit Application">
+                <h3>1. Submit Your Application</h3>
+                <p>Fill out the application form and upload your CV through our careers page.</p>
+            </div>
+
+            <div class="step">
+                <img src="pics/table.png" alt="Screening and Interview">
+                <h3>2. Screening & Interview</h3>
+                <p>We’ll review your application and schedule a quick interview if you qualify.</p>
+            </div>
+
+            <div class="step">
+                <img src="pics/success.png" alt="You're Hired">
+                <h3>3. You're Hired!</h3>
+                <p>Once selected, you’ll receive your onboarding details and start your BigBrew journey!</p>
+            </div>
         </div>
     </section>
+
     <div class="footer">
         <div class="logo2">
             <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
