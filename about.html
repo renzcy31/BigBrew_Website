@@ -28,13 +28,28 @@
         margin-bottom: 25px;
     }
 
-    .content h1 {
-        font-family: "Alfa Slab One", serif;
-        font-weight: 800;
+    .about-banner {
+        background: linear-gradient(rgba(78, 56, 34, 0.85), rgba(78, 56, 34, 0.85)),
+                        url('/pics/aboutbanner.jpg') center/cover;
+        padding: 100px 20px;
         text-align: center;
         color: white;
-        font-size: 50px;
-    }
+        }
+
+    .about-banner h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+    .about-banner p {
+        font-size: 1.3rem;
+        font-weight: 500;
+        max-width: 700px;
+        margin: 0 auto;
+        }
 
     .about {
         background: linear-gradient(135deg, #f7eec7 0%, #ebd9b4 50%, #dcc29e 100%);
@@ -151,8 +166,10 @@
             </nav>
         </div>
 
-        <div class="content">
-        </div>
+          <div class="about-banner">
+            <h1>About Big Brew</h1>
+            <p>Brewed with passion, served with heart. Discover the story behind Big Brew where every cup is made to bring people together.</p>
+          </div>
 
         <section class="abouts2">
             <div class="about-img2">
