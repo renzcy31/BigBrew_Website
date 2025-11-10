@@ -166,7 +166,6 @@
 
     .arrow-back img:hover {
         transform: translateY(-7px);
-        /* color: #fff7d2; */
         filter: invert(90%) sepia(500%) saturate(9000%) hue-rotate(300deg);
 
     }
@@ -250,7 +249,7 @@
         box-sizing: border-box;
         transition: 0.5;
         margin: 5px;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
     .products a[href] {
@@ -307,6 +306,26 @@
         font-weight: 1000;
         font-style: normal;
         font-size: 40px;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #f7eec7 0%, #ebd9b4 50%, #dcc29e 100%);
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .head {
+        border-top: 2px solid #cbb292;
+        border-bottom: 2px solid #cbb292;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .head h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #4e3822;
+        font-family: 'Montserrat', sans-serif;
     }
 </style>
 
@@ -369,9 +388,11 @@
 
     <div class="Milktea-try" id="milktea-try">
 
-        <h2 style="text-align: center; margin-bottom: 30px; font-family: 'Poppins', sans-serif; font-weight: 800;">Milk
-            Tea
-            Flavors</h2>
+        <section class="header">
+            <div class="head">
+                <h1>Milktea</h1>
+            </div>
+        </section>
 
         <div class="row">
             <div class="milktea">
@@ -434,8 +455,12 @@
         </div>
     </div>
     <div class="praf-try" id="praf-try">
-        <h2 style="text-align: center; margin-bottom: 30px; font-family: 'Poppins', sans-serif; font-weight: 800;">Praf
-            Flavors</h2>
+
+        <section class="header">
+            <div class="head">
+                <h1>Praf</h1>
+            </div>
+        </section>
 
         <div class="row">
             <div class="milktea">
@@ -471,9 +496,12 @@
         </div>
 
         <div class="coffee-try" id="coffee-try">
-            <h2 style="text-align: center; margin-bottom: 30px; font-family: 'Poppins', sans-serif; font-weight: 800;">
-                Coffee
-                Flavors</h2>
+
+            <section class="header">
+                <div class="head">
+                    <h1>Coffee</h1>
+                </div>
+            </section>
 
             <div class="row">
                 <div class="milktea">
@@ -495,10 +523,12 @@
 
 
         <div class="fruittea-try" id="fruittea-try">
-            <h2 style="text-align: center; margin-bottom: 30px; font-family: 'Poppins', sans-serif; font-weight: 800;">
-                Fruit
-                Tea
-                Flavors</h2>
+
+            <section class="header">
+                <div class="head">
+                    <h1>Fruit Tea</h1>
+                </div>
+            </section>
 
 
             <div class="row">
@@ -520,9 +550,13 @@
 
         </div>
         <div class="brosty-try" id="brosty-try">
-            <h2 style="text-align: center; margin-bottom: 30px; font-family: 'Poppins', sans-serif; font-weight: 800;">
-                Brosty
-                Flavors</h2>
+
+            <section class="header">
+                <div class="head">
+                    <h1>Brosty</h1>
+                </div>
+            </section>
+
             <div class="row">
                 <div class="milktea">
                     <img src="pics/flavors/darkchocolate.png">
@@ -544,9 +578,6 @@
 
 
         <div class="footer">
-            <div class="arrow-back">
-                <a href="#header-top"><img src="pics/up-arrow.png" alt="arrow-backup"></a>
-            </div>
             <div class="logo2">
                 <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
             </div>
