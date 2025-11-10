@@ -248,6 +248,7 @@ ul li:hover:before {
   transition: width 0.5s ease, transform 0.5s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   flex-shrink: 1;
+  filter: grayscale(100%);
 }
 .piccard:has(.cards:hover) .cards:not(:hover) {
   width: 100px;
@@ -256,6 +257,7 @@ ul li:hover:before {
   width: 500px;
   transform: scale(1.02);
   z-index: 10;
+  filter: grayscale(0%);
 }
 .cards img{
   width:100%;
