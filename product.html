@@ -96,26 +96,28 @@
         scale: 1;
     }
 
-    .content {
-        min-height: calc(60vh - 200px);
-        padding: 20px;
-        background-image: url("/pics/product-pic.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        margin-bottom: 25px;
-    }
-
-    .content h1 {
-        font-family: "Alfa Slab One", serif;
-        font-weight: 800;
+   .product-banner {
+        background: linear-gradient(rgba(78, 56, 34, 0.85), rgba(78, 56, 34, 0.85)),
+                        url('/pics/aboutbanner.jpg') center/cover;
+        padding: 100px 20px;
         text-align: center;
         color: white;
-        font-size: 50px;
-    }
+        }
+
+    .product-banner h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+    .product-banner p {
+        font-size: 1.3rem;
+        font-weight: 500;
+        max-width: 700px;
+        margin: 0 auto;
+        }
 
     .footer {
         bottom: 0;
@@ -326,9 +328,10 @@
             </ul>
         </nav>
     </div>
-    <div class="content" id="header-top">
-
-    </div>
+   <div class="product-banner">
+            <h1>Discover Our Signature Products</h1>
+            <p>Taste the perfect blend of flavor and freshness with every cup. Explore our wide range of handcrafted drinks made just for you.</p>
+          </div>
 
     <div class="row">
         <div class="products">
