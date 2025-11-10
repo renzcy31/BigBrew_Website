@@ -223,12 +223,13 @@ ul li:hover:before {
 }
 .customer h2{
   margin-top: 20px;
-  font-weight: 700;
+  font-weight: 800;
   border-top: 2px solid #a05a19;
   border-bottom: 2px solid #a05a19;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #4e3822;
+  font-family: 'Montserrat', sans-serif;
 }
 .piccard{
   display: flex;
