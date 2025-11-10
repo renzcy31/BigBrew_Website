@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/pics/favicon.png">    
+    <link rel="icon" type="image/x-icon" href="/pics/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>BIG BREW</title>
 </head>
+
 <style>
     * {
         margin: 0;
@@ -86,13 +88,13 @@
         scale: 1;
     }
 
-   .branch-banner {
+    .branch-banner {
         background: linear-gradient(rgba(78, 56, 34, 0.85), rgba(78, 56, 34, 0.85)),
-                        url('/pics/aboutbanner.jpg') center/cover;
+            url('/pics/aboutbanner.jpg') center/cover;
         padding: 100px 20px;
         text-align: center;
         color: white;
-        }
+    }
 
     .branch-banner h1 {
         font-size: 4rem;
@@ -100,23 +102,121 @@
         font-family: "Montserrat", sans-serif;
         margin-bottom: 20px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
+    }
 
     .branch-banner p {
         font-size: 1.3rem;
         font-weight: 500;
         max-width: 700px;
         margin: 0 auto;
-        }
+    }
+
     .content {
         min-height: calc(130vh - 200px);
         padding: 20px;
     }
+
     .contents h1 {
         font-family: "Montserrat", sans-serif;
         font-weight: 800;
+        color: #4e3822;
+        margin-bottom: 20px;
     }
 
+    .slider-container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+
+    .slider {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px;
+        scroll-behavior: smooth;
+    }
+
+    .slider::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .slider::-webkit-scrollbar-track {
+        background: #e6d3ad;
+        border-radius: 10px;
+    }
+
+    .slider::-webkit-scrollbar-thumb {
+        background: #4e3822;
+        border-radius: 10px;
+    }
+
+    .slider::-webkit-scrollbar-thumb:hover {
+        background: #3b2b17;
+    }
+
+
+    .card {
+        position: relative;
+        flex: 0 0 260px;
+        height: 320px;
+        border-radius: 15px;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: center;
+        color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+        border-radius: 0 0 15px 15px;
+    }
+
+    .overlay h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .overlay button {
+        background: #fff7d2;
+        color: #4e3822;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .overlay button:hover {
+        background: #f5d68d;
+    }
+
+
+    /* Footer */
     .footer {
         bottom: 0;
         left: 0;
@@ -185,16 +285,63 @@
             </ul>
         </nav>
     </div>
-    <div class="branch-banner">
-            <h1>Find a Branch</h1>
-            <p>Experience the Big Brew difference at a location near you. Visit us today!</p>
-          </div>
 
-          <section class="content">
-            <div class="contents">
-                <h1>Branch</h1>
+    <div class="branch-banner">
+        <h1>Find a Branch</h1>
+        <p>Experience the Big Brew difference at a location near you. Visit us today!</p>
+    </div>
+
+    <section class="content">
+        <div class="contents">
+            <h1>Binangonan Branches</h1>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="card" style="background-image: url(pics/bigbrew-libid.jpg);">
+                    <div class="overlay">
+                        <h2>Big Brew Tayuman</h2>
+                        <p>Located near Tayuman Elementary School</p>
+                        <button>Visit</button>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('https://via.placeholder.com/400x250');">
+                    <div class="overlay">
+                        <h2>Big Brew Batingan</h2>
+                        <p>Beside 7-Eleven Batingan</p>
+                        <button>Visit</button>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('https://via.placeholder.com/400x250');">
+                    <div class="overlay">
+                        <h2>Big Brew Calumpang</h2>
+                        <p>Fronting Calumpang Covered Court</p>
+                        <button>Visit</button>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('https://via.placeholder.com/400x250');">
+                    <div class="overlay">
+                        <h2>Big Brew Darangan</h2>
+                        <p>Near Darangan Market</p>
+                        <button>Visit</button>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('https://via.placeholder.com/400x250');">
+                    <div class="overlay">
+                        <h2>Big Brew Pag-asa</h2>
+                        <p>Inside Pag-asa Commercial Complex</p>
+                        <button>Visit</button>
+                    </div>
+                </div>
             </div>
-          </section>
+
+        </div>
+    </section>
+
     <div class="footer">
         <div class="logo2">
             <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
@@ -210,12 +357,11 @@
         </div>
         <p>&copy;2025 All Rights Reserved. Bigbrew Food and Beverages, Inc.</p>
         <div class="socials">
-            <a href="https://www.facebook.com/BigBrewOfficial"><i class="fa-brands fa-facebook"></i></a></i>
+            <a href="https://www.facebook.com/BigBrewOfficial"><i class="fa-brands fa-facebook"></i></a>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-tiktok"></i>
         </div>
     </div>
-
 </body>
 
 </html>
