@@ -72,14 +72,13 @@ ul li:hover:before {
 }
 
 .content {
-  min-height: calc(130vh - 200px);
-  padding: 20px 80px;
+  min-height: calc(115vh - 200px);
+  padding: 20px 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url("/pics/bg.png");
-  background-size: cover;
-  background-position: center;
+  background-image: url("/pics/cover2.jpg");
+  background-position: right;
   background-repeat: no-repeat;
 }
 
