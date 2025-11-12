@@ -169,6 +169,119 @@
     .socials i:hover {
         transform: scale(1.1);
     }
+     body {
+        font-family: Arial, sans-serif;
+        background-color: #f3e7d3;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 50px 80px;
+        color: #3a2c1f;
+        flex-wrap: wrap;
+    }
+
+    .info {
+        width: 45%;
+        min-width: 280px;
+    }
+
+    .info h4 {
+        margin-bottom: 5px;
+        color: #b86c28;
+    }
+
+    .info p {
+        margin: 5px 0 20px 0;
+        font-size: 15px;
+    }
+
+    .email {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .email i {
+        color: #b86c28;
+        margin-right: 8px;
+    }
+
+    .socials {
+        margin-top: 25px;
+    }
+
+    .socials p {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .socials a {
+        font-size: 25px;
+        margin-right: 15px;
+        color: #000;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+        color: #b86c28;
+    }
+
+    .form-container {
+        width: 45%;
+        min-width: 280px;
+        background-color: #f9f3e6;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: none;
+        height: 100px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        background-color: #b86c28;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #d4873c;
+    }
+
 </style>
 
 <body>
@@ -196,6 +309,67 @@
           <section class="content">
             <div class="contents">
                 <h1>Contact</h1>
+                <div class="container-contact">
+
+    <div class="info">
+        <h4>For franchising inquiries:</h4>
+        <p><i class="fa-solid fa-envelope"></i> franchising@bigbrew.com.ph</p>
+
+        <h4>For marketing inquiries:</h4>
+        <p><i class="fa-solid fa-envelope"></i> marketing@bigbrew.com.ph</p>
+
+        <h4>To get support:</h4>
+        <p><i class="fa-solid fa-envelope"></i> support@bigbrew.com.ph</p>
+
+        <h4>For all other inquiries:</h4>
+        <p><i class="fa-solid fa-envelope"></i> info@bigbrew.com.ph</p>
+
+        <div class="socials">
+            <p>FOLLOW US ON</p>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input id="name" type="text" placeholder="Enter your Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input id="email" type="email" placeholder="Enter your Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input id="contact" type="text" placeholder="Enter your Contact Number">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" required>
+                    <option>-- Select Subject --</option>
+                    <option>Franchising</option>
+                    <option>Marketing</option>
+                    <option>Support</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
+            </div>
+
+            <button class="btn">Contact Us</button>
+        </form>
+    </div>
+</div>
+
             </div>
           </section>
     <div class="footer">
