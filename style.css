@@ -215,7 +215,10 @@ ul li:hover:before {
   padding-bottom: 50px;
 }
 
-.reviews h1 {
+.heading {
+  margin-top: 2%;
+  margin-left: 35%;
+  width: 30%;
   font-size: 40px;
   font-weight: 800;
   color: #4e3822;
