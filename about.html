@@ -160,6 +160,80 @@
         color: #4e3822;
         font-family: 'Montserrat', sans-serif;
     }
+
+    @media screen and (max-width: 1000px) {
+
+        /* hero / cover area (if you use .content on this page) */
+        .content {
+            min-height: auto;
+            padding: 100px 20px 30px;
+            /* space for fixed header */
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+        }
+
+        /* top banner */
+        .about-banner {
+            padding: 80px 20px;
+        }
+
+        .about-banner h1 {
+            font-size: 2.4rem;
+        }
+
+        .about-banner p {
+            font-size: 1rem;
+        }
+
+        /* ABOUT SECTIONS – stack on mobile */
+        .about,
+        .abouts2 {
+            padding: 40px 20px;
+            flex-direction: column;
+            /* overrides row-reverse on .about */
+            gap: 30px;
+            text-align: center;
+        }
+
+        .about h1,
+        .abouts2 h1 {
+            font-size: 2.2rem;
+        }
+
+        .about p,
+        .abouts2 p {
+            font-size: 1rem;
+        }
+
+        .about-img,
+        .about-img2,
+        .about-img3 {
+            flex: 0 0 auto;
+            max-width: 100%;
+        }
+
+        .about-img img,
+        .about-img2 img,
+        .about-img3 img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* header text block under “Our Story / etc.” */
+        .header {
+            padding: 30px 20px;
+        }
+
+        .head {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .head h1 {
+            font-size: 2.2rem;
+        }
+    }
 </style>
 
 <body>
@@ -169,6 +243,11 @@
             <div class="logo">
                 <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
             </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
             <nav>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
