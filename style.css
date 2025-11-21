@@ -394,9 +394,221 @@ ul li:hover:before {
   transform: scale(1.08);
 }
 
-@media (max-width: 768px) {
-  .customers img {
+/*MOBILE BASED KEMERUT LAYOUT BORGAR LAYOUT GANON*/
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #fff7d2;
+  border-radius: 2px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-label span::before {
+  top: -8px;
+}
+
+.nav-toggle-label span::after {
+  top: 8px;
+}
+
+.nav-toggle:checked+.nav-toggle-label span {
+  background: transparent;
+}
+
+.nav-toggle:checked+.nav-toggle-label span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-toggle:checked+.nav-toggle-label span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  
+  .container {
+    padding: 0 12px;
+  }
+
+  
+  .nav-toggle-label {
+    display: block;
+    z-index: 1100;
+  }
+
+  
+  nav {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 65%;
+    max-width: 280px;
+    height: calc(100vh - 70px);
+    background-color: #4e3822;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1050;
+    margin-right: 0;
+  }
+
+  
+  .nav-toggle:checked~nav {
+    transform: translateX(0);
+  }
+
+  
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  
+  .content {
+    padding: 100px 20px 40px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center top;
+    background-size: cover;
+    min-height: auto;
+  }
+
+  .text {
+    align-items: center;
+  }
+
+  .text h1 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
+
+  .text p {
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  
+  .product-showcase {
+    padding: 50px 15px;
+  }
+
+  .product-categories {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .category {
     width: 90%;
-    height: auto;
+  }
+
+  
+  .customer {
+    padding: 40px 20px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .customer h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .piccard {
+    max-width: 100%;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .cards {
+    width: 230px;
+    height: 330px;
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+    transition: none;
+  }
+
+  
+  .piccard:has(.cards:hover) .cards:not(:hover) {
+    width: 230px;
+    display: none;
+  }
+
+  .cards:hover {
+    width: 230px;
+    transform: none;
+  }
+
+  
+  .reviews {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .heading {
+    width: 100%;
+    margin: 20px auto 30px;
+    font-size: 26px;
+    justify-content: center;
+  }
+
+  .review-wrapper {
+    overflow-x: auto;
+  }
+
+  .review-card img {
+    width: 260px;
+  }
+
+  
+  .footer {
+    padding: 20px 10px;
+    font-size: 12px;
+  }
+
+  .footer .logo2 img {
+    height: 30px;
   }
 }
