@@ -297,6 +297,153 @@
         padding: 10px 20px;
         font-family: 'montserrat', sans-serif;
     }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-toggle-label {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* hamburger lines */
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        width: 26px;
+        height: 3px;
+        background: #fff7d2;
+        border-radius: 2px;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .nav-toggle-label span::before {
+        top: -8px;
+    }
+
+    .nav-toggle-label span::after {
+        top: 8px;
+    }
+
+    /* X animation */
+    .nav-toggle:checked+.nav-toggle-label span {
+        background: transparent;
+    }
+
+    .nav-toggle:checked+.nav-toggle-label span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .nav-toggle:checked+.nav-toggle-label span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* ========= MOBILE LAYOUT (<= 1000px) ========= */
+
+    @media screen and (max-width: 1000px) {
+
+        .container {
+            padding: 0 12px;
+        }
+
+        /* show hamburger */
+        .nav-toggle-label {
+            display: block;
+            z-index: 1100;
+        }
+
+        /* slide-out menu */
+        nav {
+            position: fixed;
+            top: 70px;
+            /* same as header height */
+            right: 0;
+            width: 65%;
+            max-width: 280px;
+            height: calc(100vh - 70px);
+            background-color: #4e3822;
+            transform: translateX(100%);
+            /* hidden by default */
+            transition: transform 0.3s ease;
+            z-index: 1050;
+            margin-right: 0;
+            /* override desktop */
+        }
+
+        /* show menu when checkbox checked */
+        .nav-toggle:checked~nav {
+            transform: translateX(0);
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 12px;
+        }
+
+        nav ul li {
+            width: 100%;
+        }
+
+        nav ul li a {
+            display: block;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        /* branch banner text a bit smaller */
+        .branch-banner {
+            padding: 80px 20px;
+        }
+
+        .branch-banner h1 {
+            font-size: 2.4rem;
+        }
+
+        .branch-banner p {
+            font-size: 1rem;
+        }
+
+        /* content spacing below fixed header */
+        .content {
+            min-height: auto;
+            padding: 40px 10px;
+        }
+
+        /* slider fits small screens better */
+        .slider-container {
+            width: 100%;
+        }
+
+        .card {
+            flex: 0 0 220px;
+            height: 300px;
+        }
+
+        /* footer tighter */
+        .footer {
+            padding: 20px 10px;
+            font-size: 12px;
+        }
+
+        .footer .logo2 img {
+            height: 30px;
+        }
+    }
 </style>
 
 <body>
@@ -304,6 +451,12 @@
         <div class="logo">
             <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
         </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
