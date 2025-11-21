@@ -366,6 +366,195 @@
         font-weight: 300;
         font-family: 'Montserrat', sans-serif;
     }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-toggle-label {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* hamburger lines */
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        width: 26px;
+        height: 3px;
+        background: #fff7d2;
+        border-radius: 2px;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .nav-toggle-label span::before {
+        top: -8px;
+    }
+
+    .nav-toggle-label span::after {
+        top: 8px;
+    }
+
+    /* turn hamburger into X */
+    .nav-toggle:checked+.nav-toggle-label span {
+        background: transparent;
+    }
+
+    .nav-toggle:checked+.nav-toggle-label span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .nav-toggle:checked+.nav-toggle-label span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* ========= MOBILE LAYOUT (<= 1000px) ========= */
+
+    @media screen and (max-width: 1000px) {
+
+        .container {
+            padding: 0 12px;
+        }
+
+        /* show hamburger on mobile */
+        .nav-toggle-label {
+            display: block;
+            z-index: 1100;
+        }
+
+        /* slide-out menu panel */
+        nav {
+            position: fixed;
+            top: 70px;
+            /* header height */
+            right: 0;
+            width: 65%;
+            max-width: 280px;
+            height: calc(100vh - 70px);
+            background-color: #4e3822;
+            transform: translateX(100%);
+            /* hidden by default */
+            transition: transform 0.3s ease;
+            z-index: 1050;
+            margin-right: 0;
+        }
+
+        /* show menu when checkbox is checked */
+        .nav-toggle:checked~nav {
+            transform: translateX(0);
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 12px;
+        }
+
+        nav ul li {
+            width: 100%;
+        }
+
+        nav ul li a {
+            display: block;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        /* banner text smaller */
+        .news-banner {
+            padding: 80px 20px;
+        }
+
+        .news-banner h1 {
+            font-size: 2.4rem;
+        }
+
+        .news-banner p {
+            font-size: 1rem;
+        }
+
+        /* general content spacing */
+        .content {
+            min-height: auto;
+            padding: 30px 15px;
+        }
+
+        /* sections with image + text stack vertically */
+        .abouts2,
+        .abouts3,
+        .abouts4 {
+            padding: 40px 20px;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .abouts2 h1,
+        .abouts3 h1,
+        .abouts4 h1 {
+            font-size: 2.2rem;
+        }
+
+        .abouts2 p,
+        .abouts3 p,
+        .abouts4 p {
+            font-size: 1rem;
+        }
+
+        .about-img2,
+        .about-img3,
+        .about-img4 {
+            flex: 0 0 auto;
+            max-width: 100%;
+        }
+
+        .about-img4 img {
+            height: auto;
+        }
+
+        /* customer gallery */
+        .customer {
+            padding: 30px 15px;
+        }
+
+        .piccard {
+            width: 100%;
+            gap: 15px;
+        }
+
+        .cards img {
+            height: 240px;
+        }
+
+        .about-content5 {
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* footer tighter */
+        .footer {
+            padding: 20px 10px;
+            font-size: 12px;
+        }
+
+        .footer .logo2 img {
+            height: 30px;
+        }
+    }
 </style>
 
 <body>
@@ -373,6 +562,12 @@
         <div class="logo">
             <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
         </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
