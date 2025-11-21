@@ -94,9 +94,10 @@
     .contact-banner {
         background: linear-gradient(rgba(78, 56, 34, 0.85), rgba(78, 56, 34, 0.85)),
             url('/pics/aboutbanner.jpg') center/cover;
-        padding: 100px 20px;
+        padding: 120px 20px 80px;
         text-align: center;
         color: white;
+        margin-top: 70px;
     }
 
     .contact-banner h1 {
@@ -112,11 +113,12 @@
         font-weight: 500;
         max-width: 700px;
         margin: 0 auto;
+        line-height: 1.6;
     }
 
     .content {
         min-height: calc(100vh - 200px);
-        padding: 20px;
+        padding: 60px 20px;
     }
 
     .contents h1 {
@@ -175,76 +177,93 @@
         transform: scale(1.1);
     }
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f3e7d3;
-        margin: 0;
-        padding: 0;
-    }
 
     .container-contact {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 50px 80px;
-        color: #3a2c1f;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 60px;
         flex-wrap: wrap;
     }
 
     .info {
-        width: 45%;
-        min-width: 280px;
+        flex: 1;
+        min-width: 300px;
     }
-
+    .info-card {
+        background: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        border-left: 4px solid #b86c28;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .info-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 15px rgba(184, 108, 40, 0.2);
+    }
     .info h4 {
-        margin-bottom: 5px;
         color: #b86c28;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        font-weight: 700;
     }
 
-    .info p {
-        margin: 5px 0 20px 0;
+   .info-card p {
+        color: #3a2c1f;
         font-size: 15px;
-    }
-
-    .email {
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
+        gap: 10px;
+        margin: 0;
     }
 
-    .email i {
+    .info-card i {
         color: #b86c28;
-        margin-right: 8px;
+        font-size: 18px;
     }
 
-    .socials {
-        margin-top: 25px;
+   .socials-section {
+        background: rgba(255, 255, 255, 0.5);
+        padding: 25px;
+        border-radius: 12px;
+        margin-top: 30px;
     }
-
-    .socials p {
-        font-weight: bold;
-        margin-bottom: 10px;
+     .socials-section p {
+        font-weight: 700;
+        color: #4e3822;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        letter-spacing: 1px;
     }
-
-    .socials a {
-        font-size: 25px;
-        margin-right: 15px;
-        color: #000;
+     .socials-section a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        margin-right: 12px;
+        color: #4e3822;
         text-decoration: none;
-        transition: color 0.3s ease;
+        border-radius: 50%;
+        background: rgba(184, 108, 40, 0.1);
+        transition: all 0.3s ease;
+        font-size: 20px;
     }
-
-    .socials a:hover {
-        color: #b86c28;
+    .socials-section a:hover {
+        background: #b86c28;
+        color: white;
+        transform: translateY(-3px);
     }
-
     .form-container {
-        width: 45%;
-        min-width: 280px;
-        background-color: #f9f3e6;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        min-width: 300px;
+        background-color: #fff;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     }
 
     .form-group {
@@ -253,20 +272,64 @@
 
     label {
         display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #4e3822;
+        font-size: 14px;
+    }
+
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(184, 108, 40, 0.4);
+    }
+
+    .btn:active {
+        transform: translateY(0);
+    }
+
+    .success-message {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border-left: 4px solid #28a745;
+    }
+
+    .success-message.show {
+        display: block;
     }
 
     input,
     select,
     textarea {
         width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
+        padding: 12px 15px;
+        border: 2px solid #e0d5c7;
+        border-radius: 8px;
         font-size: 14px;
+        font-family: "Poppins", sans-serif !important;
+        font-weight: 400;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        background: #fafafa;
     }
 
+     input::placeholder,
+    textarea::placeholder {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        color: #999;
+    }
+     input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #b86c28;
+        box-shadow: 0 0 0 3px rgba(184, 108, 40, 0.1);
+        background: white;
+    }
     textarea {
         resize: none;
         height: 100px;
@@ -284,10 +347,6 @@
         font-weight: bold;
         cursor: pointer;
         transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-        background-color: #d4873c;
     }
 
     .head {
@@ -334,69 +393,77 @@
         <div class="head">
             <h1>Contact Us</h1>
         </div>
-        <div class="contents">
 
-            <div class="container-contact">
-
-                <div class="info">
+        <div class="container-contact">
+            <div class="info">
+                <div class="info-card">
                     <h4>For franchising inquiries:</h4>
                     <p><i class="fa-solid fa-envelope"></i> franchising@bigbrew.com.ph</p>
-
-                    <h4>For marketing inquiries:</h4>
-                    <p><i class="fa-solid fa-envelope"></i> marketing@bigbrew.com.ph</p>
-
-                    <h4>To get support:</h4>
-                    <p><i class="fa-solid fa-envelope"></i> support@bigbrew.com.ph</p>
-
-                    <h4>For all other inquiries:</h4>
-                    <p><i class="fa-solid fa-envelope"></i> info@bigbrew.com.ph</p>
-
-                    <div class="socials">
-                        <p>FOLLOW US ON</p>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
                 </div>
 
-                <div class="form-container">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Full Name:</label>
-                            <input id="name" type="text" placeholder="Enter your Full Name" required>
-                        </div>
+                <div class="info-card">
+                    <h4>For marketing inquiries:</h4>
+                    <p><i class="fa-solid fa-envelope"></i> marketing@bigbrew.com.ph</p>
+                </div>
 
-                        <div class="form-group">
-                            <label for="email">E-mail:</label>
-                            <input id="email" type="email" placeholder="Enter your Email" required>
-                        </div>
+                <div class="info-card">
+                    <h4>To get support:</h4>
+                    <p><i class="fa-solid fa-envelope"></i> support@bigbrew.com.ph</p>
+                </div>
 
-                        <div class="form-group">
-                            <label for="contact">Contact Number:</label>
-                            <input id="contact" type="text" placeholder="Enter your Contact Number">
-                        </div>
+                <div class="info-card">
+                    <h4>For all other inquiries:</h4>
+                    <p><i class="fa-solid fa-envelope"></i> info@bigbrew.com.ph</p>
+                </div>
 
-                        <div class="form-group">
-                            <label for="subject">Subject:</label>
-                            <select id="subject" required>
-                                <option>-- Select Subject --</option>
-                                <option>Franchising</option>
-                                <option>Marketing</option>
-                                <option>Support</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" placeholder="Enter your message"></textarea>
-                        </div>
-
-                        <button class="btn">Contact Us</button>
-                    </form>
+                <div class="socials-section">
+                    <p>FOLLOW US ON</p>
+                    <a href="https://www.facebook.com/BigBrewOfficial" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
 
+            <div class="form-container">
+                <div class="success-message" id="successMessage">
+                    <i class="fa-solid fa-check-circle"></i> Thank you! Your message has been sent successfully.
+                </div>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name: <span style="color: red;">*</span></label>
+                        <input id="name" type="text" placeholder="Enter your Full Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail: <span style="color: red;">*</span></label>
+                        <input id="email" type="email" placeholder="Enter your Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Contact Number:</label>
+                        <input id="contact" type="tel" placeholder="Enter your Contact Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject: <span style="color: red;">*</span></label>
+                        <select id="subject" required>
+                            <option value="">-- Select Subject --</option>
+                            <option value="franchising">Franchising</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="support">Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message: <span style="color: red;">*</span></label>
+                        <textarea id="message" placeholder="Enter your message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
     <div class="footer">
