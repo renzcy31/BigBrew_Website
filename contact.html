@@ -119,6 +119,7 @@
     .content {
         min-height: calc(100vh - 200px);
         padding: 60px 20px;
+
     }
 
     .contents h1 {
@@ -192,6 +193,7 @@
         flex: 1;
         min-width: 300px;
     }
+
     .info-card {
         background: rgba(255, 255, 255, 0.5);
         padding: 20px;
@@ -200,10 +202,12 @@
         border-left: 4px solid #b86c28;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .info-card:hover {
         transform: translateX(5px);
         box-shadow: 0 4px 15px rgba(184, 108, 40, 0.2);
     }
+
     .info h4 {
         color: #b86c28;
         font-size: 1.1rem;
@@ -211,7 +215,7 @@
         font-weight: 700;
     }
 
-   .info-card p {
+    .info-card p {
         color: #3a2c1f;
         font-size: 15px;
         display: flex;
@@ -225,20 +229,22 @@
         font-size: 18px;
     }
 
-   .socials-section {
+    .socials-section {
         background: rgba(255, 255, 255, 0.5);
         padding: 25px;
         border-radius: 12px;
         margin-top: 30px;
     }
-     .socials-section p {
+
+    .socials-section p {
         font-weight: 700;
         color: #4e3822;
         margin-bottom: 15px;
         font-size: 1rem;
         letter-spacing: 1px;
     }
-     .socials-section a {
+
+    .socials-section a {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -252,11 +258,13 @@
         transition: all 0.3s ease;
         font-size: 20px;
     }
+
     .socials-section a:hover {
         background: #b86c28;
         color: white;
         transform: translateY(-3px);
     }
+
     .form-container {
         flex: 1;
         min-width: 300px;
@@ -316,13 +324,14 @@
         background: #fafafa;
     }
 
-     input::placeholder,
+    input::placeholder,
     textarea::placeholder {
         font-family: "Poppins", sans-serif;
         font-weight: 400;
         color: #999;
     }
-     input:focus,
+
+    input:focus,
     select:focus,
     textarea:focus {
         outline: none;
@@ -330,6 +339,7 @@
         box-shadow: 0 0 0 3px rgba(184, 108, 40, 0.1);
         background: white;
     }
+
     textarea {
         resize: none;
         height: 100px;
@@ -362,6 +372,160 @@
         color: #4e3822;
         font-family: 'Montserrat', sans-serif;
         text-align: center;
+
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-toggle-label {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* hamburger lines */
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        width: 26px;
+        height: 3px;
+        background: #fff7d2;
+        border-radius: 2px;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .nav-toggle-label span::before {
+        top: -8px;
+    }
+
+    .nav-toggle-label span::after {
+        top: 8px;
+    }
+
+    /* turn hamburger into X when checked */
+    .nav-toggle:checked+.nav-toggle-label span {
+        background: transparent;
+    }
+
+    .nav-toggle:checked+.nav-toggle-label span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .nav-toggle:checked+.nav-toggle-label span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* ========= MOBILE LAYOUT (<= 1000px) ========= */
+
+    @media screen and (max-width: 1000px) {
+
+        .container {
+            padding: 0 12px;
+        }
+
+        /* show hamburger on mobile */
+        .nav-toggle-label {
+            display: block;
+            z-index: 1100;
+        }
+
+        /* slide-out nav panel */
+        nav {
+            position: fixed;
+            top: 70px;
+            /* header height */
+            right: 0;
+            width: 65%;
+            max-width: 280px;
+            height: calc(100vh - 70px);
+            background-color: #4e3822;
+            transform: translateX(100%);
+            /* hidden by default */
+            transition: transform 0.3s ease;
+            z-index: 1050;
+            margin-right: 0;
+        }
+
+        /* show menu when checkbox checked */
+        .nav-toggle:checked~nav {
+            transform: translateX(0);
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 12px;
+        }
+
+        nav ul li {
+            width: 100%;
+        }
+
+        nav ul li a {
+            display: block;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        /* contact banner tweaks */
+        .contact-banner {
+            padding: 90px 20px 50px;
+            margin-top: 70px;
+            /* leaves room for fixed header */
+        }
+
+        .contact-banner h1 {
+            font-size: 2.4rem;
+        }
+
+        .contact-banner p {
+            font-size: 1rem;
+        }
+
+        /* content spacing */
+        .content {
+            padding: 30px 15px 50px;
+            min-height: auto;
+        }
+
+        /* contact columns stack */
+        .container-contact {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info,
+        .form-container {
+            min-width: 100%;
+        }
+
+        .form-container {
+            padding: 25px;
+        }
+
+        /* footer tighter */
+        .footer {
+            padding: 20px 10px;
+            font-size: 12px;
+        }
+
+        .footer .logo2 img {
+            height: 30px;
+        }
     }
 </style>
 
@@ -370,6 +534,12 @@
         <div class="logo">
             <img src="https://bigbrew.com.ph/webimage/logo.png" alt="Big Brew Logo">
         </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -418,7 +588,8 @@
 
                 <div class="socials-section">
                     <p>FOLLOW US ON</p>
-                    <a href="https://www.facebook.com/BigBrewOfficial" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/BigBrewOfficial" target="_blank" title="Facebook"><i
+                            class="fab fa-facebook"></i></a>
                     <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
