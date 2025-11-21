@@ -77,7 +77,7 @@ ul li:hover:before {
 }
 
 .content {
-  min-height: calc(120vh - 210px);
+  min-height: calc(135vh - 210px);
   padding: 20px 90px;
   display: flex;
   align-items: center;
@@ -221,10 +221,10 @@ ul li:hover:before {
 }
 
 .heading {
-  margin-top: 2%;
+  margin-top: 5%;
   margin-left: 35%;
   width: 30%;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 800;
   color: #4e3822;
   margin-bottom: 60px;
