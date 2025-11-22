@@ -370,7 +370,6 @@
         padding: 10px;
     }
 
-    /* hamburger lines */
     .nav-toggle-label span,
     .nav-toggle-label span::before,
     .nav-toggle-label span::after {
@@ -398,7 +397,6 @@
         top: 8px;
     }
 
-    /* turn hamburger into X */
     .nav-toggle:checked+.nav-toggle-label span {
         background: transparent;
     }
@@ -413,7 +411,6 @@
         transform: rotate(-45deg);
     }
 
-    /* ========= MOBILE LAYOUT (<= 1000px) ========= */
 
     @media screen and (max-width: 1000px) {
 
@@ -421,30 +418,25 @@
             padding: 0 12px;
         }
 
-        /* show hamburger on mobile */
         .nav-toggle-label {
             display: block;
             z-index: 1100;
         }
 
-        /* slide-out menu */
         nav {
             position: fixed;
             top: 70px;
-            /* same as header height */
             right: 0;
             width: 65%;
             max-width: 280px;
             height: calc(100vh - 70px);
             background-color: #4e3822;
             transform: translateX(100%);
-            /* hidden by default */
             transition: transform 0.3s ease;
             z-index: 1050;
             margin-right: 0;
         }
 
-        /* show menu when checkbox is checked */
         .nav-toggle:checked~nav {
             transform: translateX(0);
         }
@@ -466,7 +458,6 @@
             font-size: 14px;
         }
 
-        /* banner text smaller on mobile */
         .contact-banner {
             padding: 80px 20px;
         }
@@ -479,11 +470,9 @@
             font-size: 1rem;
         }
 
-        /* main careers block */
         .contents {
             height: auto;
             padding: 100px 15px 40px;
-            /* space for fixed header */
             border: none;
         }
 
@@ -503,7 +492,6 @@
             padding: 0 10px;
         }
 
-        /* job cards stack nicely */
         .apply-container {
             flex-direction: column;
             align-items: center;
@@ -517,7 +505,6 @@
             height: auto;
         }
 
-        /* join section & steps */
         .join-section {
             padding: 3em 1.5em;
         }
@@ -535,7 +522,6 @@
             max-width: 320px;
         }
 
-        /* footer tighter */
         .footer {
             padding: 20px 10px;
             font-size: 12px;
