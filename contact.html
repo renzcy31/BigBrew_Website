@@ -385,7 +385,6 @@
         padding: 10px;
     }
 
-    /* hamburger lines */
     .nav-toggle-label span,
     .nav-toggle-label span::before,
     .nav-toggle-label span::after {
@@ -413,7 +412,6 @@
         top: 8px;
     }
 
-    /* turn hamburger into X when checked */
     .nav-toggle:checked+.nav-toggle-label span {
         background: transparent;
     }
@@ -428,7 +426,6 @@
         transform: rotate(-45deg);
     }
 
-    /* ========= MOBILE LAYOUT (<= 1000px) ========= */
 
     @media screen and (max-width: 1000px) {
 
@@ -436,30 +433,25 @@
             padding: 0 12px;
         }
 
-        /* show hamburger on mobile */
         .nav-toggle-label {
             display: block;
             z-index: 1100;
         }
 
-        /* slide-out nav panel */
         nav {
             position: fixed;
             top: 70px;
-            /* header height */
             right: 0;
             width: 65%;
             max-width: 280px;
             height: calc(100vh - 70px);
             background-color: #4e3822;
             transform: translateX(100%);
-            /* hidden by default */
             transition: transform 0.3s ease;
             z-index: 1050;
             margin-right: 0;
         }
 
-        /* show menu when checkbox checked */
         .nav-toggle:checked~nav {
             transform: translateX(0);
         }
@@ -481,11 +473,9 @@
             font-size: 14px;
         }
 
-        /* contact banner tweaks */
         .contact-banner {
             padding: 90px 20px 50px;
             margin-top: 70px;
-            /* leaves room for fixed header */
         }
 
         .contact-banner h1 {
@@ -496,13 +486,11 @@
             font-size: 1rem;
         }
 
-        /* content spacing */
         .content {
             padding: 30px 15px 50px;
             min-height: auto;
         }
 
-        /* contact columns stack */
         .container-contact {
             flex-direction: column;
             gap: 30px;
@@ -517,7 +505,6 @@
             padding: 25px;
         }
 
-        /* footer tighter */
         .footer {
             padding: 20px 10px;
             font-size: 12px;
