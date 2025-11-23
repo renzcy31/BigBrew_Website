@@ -327,13 +327,11 @@ ul li:hover:before {
 
 .customer {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 30px;
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 20px;
   background: linear-gradient(135deg, #f7eec7 0%, #ebd9b4 50%, #dcc29e 100%);
-  color: white;
   min-height: calc(120vh - 200px);
 }
 
@@ -342,12 +340,11 @@ ul li:hover:before {
   font-weight: 800;
   color: #4e3822;
   margin-bottom: 60px;
-  position: relative;
-  display: inline-block;
   border-top: 3px solid #a05a19;
   border-bottom: 3px solid #a05a19;
   padding: 10px 20px;
   font-family: 'montserrat', sans-serif;
+  text-align: center;
 }
 
 .piccard {
@@ -548,39 +545,65 @@ ul li:hover:before {
   .customer {
     padding: 40px 20px;
     min-height: auto;
-    text-align: center;
   }
 
   .customer h2 {
     font-size: 28px;
     margin-bottom: 30px;
+    padding: 8px 15px;
   }
 
   .piccard {
     max-width: 100%;
-    gap: 10px;
+    gap: 15px;
     overflow-x: auto;
+    flex-direction: row;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+     scrollbar-width: thin;
+        scrollbar-color: #a05a19 transparent;
   }
 
   .cards {
-    width: 230px;
-    height: 330px;
-    flex: 0 0 auto;
-    margin-bottom: 20px;
-    transition: none;
+    width: 200px;
+    height: 350px;
+    min-width: 200px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+   .piccard::-webkit-scrollbar {
+    height: 8px;
+}
+
+   .piccard::-webkit-scrollbar-track {
+    background: transparent;
   }
 
+   .piccard::-webkit-scrollbar-thumb {
+    background: #a05a19;
+    border-radius: 10px;
+    }
   
   .piccard:has(.cards:hover) .cards:not(:hover) {
-    width: 230px;
-    display: none;
+    width: 200px;
   }
 
   .cards:hover {
     width: 230px;
-    transform: none;
+    transform: scale(1.05);
+  }
+  .cards:active {
+  transform: scale(0.98);
+ }
+ .cards img {
+  transition: none;
   }
 
+  .cards:hover img {
+  transform: none;
+ }
   
   .reviews {
     padding: 40px 20px;
@@ -612,3 +635,27 @@ ul li:hover:before {
     height: 30px;
   }
 }
+@media screen and (max-width: 600px) {
+      .customer h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .cards {
+        width: 170px;
+        min-width: 170px;
+        height: 300px;
+      }
+
+      .piccard {
+        gap: 12px;
+      }
+
+      .cards:hover {
+        width: 170px;
+      }
+
+      .piccard:has(.cards:hover) .cards:not(:hover) {
+        width: 170px;
+      }
+    }
