@@ -96,14 +96,14 @@ ul li:hover:before {
 .text h1 {
   font-size: 4.5rem;
   font-weight: 800;
-  color: #4e3822;
+  color: #9c460d;
   line-height: 1.2;
   font-family: "Montserrat";
 }
 
 .text p {
   font-size: 1.5rem;
-  color: black;
+  color: rgb(58, 40, 31);
   margin: 0;
   font-weight: 700;
 }
@@ -447,18 +447,18 @@ ul li:hover:before {
 
 @media screen and (max-width: 1000px) {
 
-  
+
   .container {
     padding: 0 12px;
   }
 
-  
+
   .nav-toggle-label {
     display: block;
     z-index: 1100;
   }
 
-  
+
   nav {
     position: fixed;
     top: 70px;
@@ -473,12 +473,12 @@ ul li:hover:before {
     margin-right: 0;
   }
 
-  
+
   .nav-toggle:checked~nav {
     transform: translateX(0);
   }
 
-  
+
   nav ul {
     flex-direction: column;
     align-items: flex-start;
@@ -496,7 +496,7 @@ ul li:hover:before {
     font-size: 14px;
   }
 
-  
+
   .content {
     padding: 100px 20px 40px;
     text-align: center;
@@ -526,7 +526,7 @@ ul li:hover:before {
     margin-top: 16px;
   }
 
-  
+
   .product-showcase {
     padding: 50px 15px;
   }
@@ -541,7 +541,7 @@ ul li:hover:before {
     width: 90%;
   }
 
-  
+
   .customer {
     padding: 40px 20px;
     min-height: auto;
@@ -562,8 +562,8 @@ ul li:hover:before {
     justify-content: flex-start;
     -webkit-overflow-scrolling: touch;
     padding: 10px 0;
-     scrollbar-width: thin;
-        scrollbar-color: #a05a19 transparent;
+    scrollbar-width: thin;
+    scrollbar-color: #a05a19 transparent;
   }
 
   .cards {
@@ -573,19 +573,20 @@ ul li:hover:before {
     flex-shrink: 0;
     transition: transform 0.3s ease;
   }
-   .piccard::-webkit-scrollbar {
-    height: 8px;
-}
 
-   .piccard::-webkit-scrollbar-track {
+  .piccard::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .piccard::-webkit-scrollbar-track {
     background: transparent;
   }
 
-   .piccard::-webkit-scrollbar-thumb {
+  .piccard::-webkit-scrollbar-thumb {
     background: #a05a19;
     border-radius: 10px;
-    }
-  
+  }
+
   .piccard:has(.cards:hover) .cards:not(:hover) {
     width: 200px;
   }
@@ -594,17 +595,19 @@ ul li:hover:before {
     width: 230px;
     transform: scale(1.05);
   }
+
   .cards:active {
-  transform: scale(0.98);
- }
- .cards img {
-  transition: none;
+    transform: scale(0.98);
+  }
+
+  .cards img {
+    transition: none;
   }
 
   .cards:hover img {
-  transform: none;
- }
-  
+    transform: none;
+  }
+
   .reviews {
     padding: 40px 20px;
     min-height: auto;
@@ -625,7 +628,7 @@ ul li:hover:before {
     width: 260px;
   }
 
-  
+
   .footer {
     padding: 20px 10px;
     font-size: 12px;
@@ -635,27 +638,28 @@ ul li:hover:before {
     height: 30px;
   }
 }
+
 @media screen and (max-width: 600px) {
-      .customer h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
+  .customer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 
-      .cards {
-        width: 170px;
-        min-width: 170px;
-        height: 300px;
-      }
+  .cards {
+    width: 170px;
+    min-width: 170px;
+    height: 300px;
+  }
 
-      .piccard {
-        gap: 12px;
-      }
+  .piccard {
+    gap: 12px;
+  }
 
-      .cards:hover {
-        width: 170px;
-      }
+  .cards:hover {
+    width: 170px;
+  }
 
-      .piccard:has(.cards:hover) .cards:not(:hover) {
-        width: 170px;
-      }
-    }
+  .piccard:has(.cards:hover) .cards:not(:hover) {
+    width: 170px;
+  }
+}
